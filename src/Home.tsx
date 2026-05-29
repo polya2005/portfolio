@@ -6,7 +6,7 @@ import { PiCircuitryBold } from "react-icons/pi";
 
 function Home() {
   return (
-    <div className="flex grow shrink w-full bg-bg-primary/80 rounded-xl p-6 space-x-2.5">
+    <div className="flex grow shrink w-full bg-bg-primary/50 rounded-xl p-6 space-x-2.5">
       <div className="flex flex-1 grow shrink flex-col space-y-10">
         <h1 className="text-accent-bright text-6xl font-mono font-bold mt-6">
           Than
