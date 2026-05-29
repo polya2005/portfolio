@@ -5,6 +5,7 @@ import "./index.css";
 
 import App from "./App.tsx";
 import Home from "./Home.tsx";
+import Contact from "./Contact.tsx";
 
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
@@ -12,6 +13,7 @@ createRoot(document.getElementById("root")!).render(
       <Routes>
         <Route element={<App />}>
           <Route path="/" index element={<Home />} />
+          <Route path="/contact" element={<Contact />} />
         </Route>
       </Routes>
     </BrowserRouter>
