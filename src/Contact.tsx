@@ -1,5 +1,5 @@
 import "./index.css";
-import ContactItem from "./ContactItem.tsx";
+import ContactItem from "./components/ContactItem.tsx";
 import { HiOutlineEnvelope } from "react-icons/hi2";
 import { FaGithub, FaLinkedin } from "react-icons/fa6";
 
