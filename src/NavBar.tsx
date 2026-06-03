@@ -3,7 +3,7 @@ import { NavLink } from "react-router-dom";
 
 function NavBar() {
   return (
-    <div className="p-6 flex items-baseline justify-between bg-bg-elevated rounded-xl grow-0 shrink">
+    <div className="p-6 flex items-baseline justify-between bg-bg-elevated rounded-xl grow-0 shrink sticky top-0 z-50 shadow">
       <NavLink to="/" className="font-mono text-2xl text-accent-bright">
         Than Thanpanit
       </NavLink>
