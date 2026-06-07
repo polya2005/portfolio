@@ -8,6 +8,7 @@ import Home from "./Home.tsx";
 import Contact from "./Contact.tsx";
 import Resume from "./Resume.tsx";
 import About from "./About.tsx";
+import ErrorPage from "./Error.tsx";
 
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
@@ -18,6 +19,7 @@ createRoot(document.getElementById("root")!).render(
           <Route path="/resume" element={<Resume />} />
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="*" element={<ErrorPage />} />
         </Route>
       </Routes>
     </BrowserRouter>
