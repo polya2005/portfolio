@@ -4,21 +4,7 @@ import { TooltipProvider } from "../context/TooltipContext";
 import Tooltip from "../components/Tooltip";
 import HorizontalLine from "../components/HorizontalLine";
 import { useState } from "react";
-
-type Course = {
-  courseNumber: string;
-  courseName: string;
-};
-
-type Semester = {
-  semesterName: string;
-  courses: Course[];
-};
-
-type Year = {
-  yearName: string;
-  semesters: Semester[];
-};
+import type { Year, Course, Semester } from "../types";
 
 const courseworkData: Year[] = [
   {

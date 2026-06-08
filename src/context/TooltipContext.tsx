@@ -1,8 +1,5 @@
 import React, { createContext, useContext, useRef } from "react";
-
-interface TooltipContextType {
-  getNextTooltipId: () => number;
-}
+import type { TooltipContextType } from "../types";
 
 const TooltipContext = createContext<TooltipContextType | undefined>(undefined);
 
