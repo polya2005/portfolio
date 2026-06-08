@@ -1,5 +1,5 @@
-import "./index.css";
-import ContactItem from "./components/ContactItem.tsx";
+import "../index.css";
+import ContactItem from "../components/ContactItem.tsx";
 import { HiOutlineEnvelope } from "react-icons/hi2";
 import { FaGithub, FaLinkedin } from "react-icons/fa6";
 
@@ -22,10 +22,7 @@ function Contact() {
         >
           thanpa28@mit.edu
         </ContactItem>
-        <ContactItem
-          icon={<FaGithub />}
-          href="https://github.com/polya2005"
-        >
+        <ContactItem icon={<FaGithub />} href="https://github.com/polya2005">
           github.com/polya2005
         </ContactItem>
         <ContactItem

@@ -1,5 +1,5 @@
 import { FaDownload } from "react-icons/fa6";
-import "./index.css";
+import "../index.css";
 
 function Resume() {
   return (

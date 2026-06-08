@@ -1,8 +1,8 @@
 import { NavLink } from "react-router-dom";
-import "./index.css";
-import { TooltipProvider } from "./context/TooltipContext";
-import Tooltip from "./components/Tooltip";
-import HorizontalLine from "./components/HorizontalLine";
+import "../index.css";
+import { TooltipProvider } from "../context/TooltipContext";
+import Tooltip from "../components/Tooltip";
+import HorizontalLine from "../components/HorizontalLine";
 import { useState } from "react";
 
 type Course = {
@@ -453,7 +453,9 @@ function MiscInfo() {
             location.
           </li>
           <li>
-            Niche Book: QED: The Strange Theory of Light and Matter by Richard Feynman. It is a rare popular science book that provides deeper insights into the actual physics and mathematics behind the theory.
+            Niche Book: QED: The Strange Theory of Light and Matter by Richard
+            Feynman. It is a rare popular science book that provides deeper
+            insights into the actual physics and mathematics behind the theory.
           </li>
         </ul>
       </CollapsibleSubsection>

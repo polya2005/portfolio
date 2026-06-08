@@ -1,5 +1,5 @@
-import "./index.css";
-import QuickLink from "./components/QuickLink.tsx";
+import "../index.css";
+import QuickLink from "../components/QuickLink.tsx";
 import { FaFileLines, FaGithub } from "react-icons/fa6";
 import { HiOutlineEnvelope } from "react-icons/hi2";
 import { PiCircuitryBold } from "react-icons/pi";
