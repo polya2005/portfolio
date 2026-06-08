@@ -16,3 +16,11 @@ export type Year = {
 export interface TooltipContextType {
   getNextTooltipId: () => number;
 }
+
+// Note data type
+export type NoteItem = {
+  fileName: string;
+  title: string;
+  datePosted: Date;
+  dateEdited: Date;
+}
