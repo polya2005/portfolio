@@ -23,4 +23,5 @@ export type NoteItem = {
   title: string;
   datePosted: Date;
   dateEdited: Date;
+  preview?: string;
 }

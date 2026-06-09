@@ -4,11 +4,13 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import "./index.css";
 
 import App from "./App.tsx";
-import Home from "./Home.tsx";
-import Contact from "./Contact.tsx";
-import Resume from "./Resume.tsx";
-import About from "./About.tsx";
+import Home from "./pages/Home.tsx";
+import Contact from "./pages/Contact.tsx";
+import Resume from "./pages/Resume.tsx";
+import About from "./pages/About.tsx";
 import ErrorPage from "./Error.tsx";
+import Notes from "./pages/Notes.tsx";
+import NotePage from "./pages/NotePage.tsx";
 
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
@@ -18,6 +20,8 @@ createRoot(document.getElementById("root")!).render(
           <Route path="/" index element={<Home />} />
           <Route path="/resume" element={<Resume />} />
           <Route path="/about" element={<About />} />
+          <Route path="/notes" element={<Notes />} />
+          <Route path="/note/:noteId" element={<NotePage />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="*" element={<ErrorPage />} />
         </Route>
