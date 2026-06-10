@@ -34,3 +34,23 @@ export type NoteItem = {
   preview?: string;
   tags: NoteTag[];
 };
+
+// Project data types
+export const ProjectSkill = {
+  C: "C",
+  Cpp: "C++",
+  Python: "Python",
+  PcbDesign: "PCB Design",
+  LaserCutting: "Laser Cutting",
+  ThreeDPrinting: "3D Printing",
+};
+
+export type ProjectSkill = (typeof ProjectSkill)[keyof typeof ProjectSkill];
+
+export type ProjectItem = {
+  title: string;
+  imagePath?: string;
+  description: string;
+  skills: ProjectSkill[];
+  fileName: string;
+};
