@@ -17,11 +17,20 @@ export interface TooltipContextType {
   getNextTooltipId: () => number;
 }
 
-// Note data type
+// Note data types
+export const NoteTag = {
+  Personal: "personal",
+  Coursework: "coursework",
+  Project: "project",
+} as const;
+
+export type NoteTag = (typeof NoteTag)[keyof typeof NoteTag];
+
 export type NoteItem = {
   fileName: string;
   title: string;
   datePosted: Date;
   dateEdited: Date;
   preview?: string;
-}
+  tags: NoteTag[];
+};

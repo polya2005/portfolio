@@ -3,6 +3,7 @@ import { getNoteById } from "../notes";
 import { Link } from "react-router-dom";
 import { FaCalendar } from "react-icons/fa6";
 import HorizontalLine from "./HorizontalLine";
+import NoteTagLabel from "./NoteTagLabel";
 
 function NoteCard({ noteId }: { noteId: string }) {
   const note = getNoteById(noteId);
@@ -28,6 +29,10 @@ function NoteCard({ noteId }: { noteId: string }) {
                 ? ""
                 : ` (edited: ${note.dateEdited.toLocaleDateString()})`)}
           </span>
+        </div>
+        <div className="flex items-center space-x-1 ml-4">
+          {note.tags.length > 0 &&
+            note.tags.map((tag) => <NoteTagLabel key={tag} tag={tag} />)}
         </div>
       </div>
       <HorizontalLine />
