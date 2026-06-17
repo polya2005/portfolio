@@ -1,0 +1,49 @@
+# SPAID: The Star Pointing and Identification Device
+
+This project is the second version of this [first, proof of concept version](/project/spaidv1).
+
+## Some background
+In the first version's writeup, I wrote
+> As the name suggests, the device requires these core functionalities:
+>
+> - Given a choice of star, point the (physical) pointer toward the position of the star in the sky
+> - Given the pointer's direction, identify the star it is poining toward
+> 
+> For the device to be useful, it also needs the way to
+>
+> - Store the star data (SD Card)
+> - Interact with the user (TFT LCD touchscreen)
+> - Obtain necessary information for the relevant spherical astronomical calculations (GPS, Magnetometer, and Accelerometer)
+> - Rotate the pointer to the desired azimuth and altitude angle (28BYJ-48 stepper motors; will be replaced with a more robust model of stepper motors in the new version)
+
+Then, I listed the hardware used. That brings us to the first updates in this version.
+
+## Changes
+
+### Hardware / electronics
+I keep all the choices I made except
+- Replacing Arduino Mega with Raspberry Pi Pico,
+- Storing the star data in LittleFS instead of a micro SD card,
+- Using more robust NEMA17 stepper motors instead of 28BYJ-48 ones (and changing stepper drivers accordingly)
+- Removing the IR keyboard in favor of on-screen keyboard, and
+- Ordering a professionally made PCB for reliable connections.
+
+### Enclosure
+I am also working on a new design to accommodate the new motors and make the device more robust.
+
+### Software
+The code is almost a complete rewrite because the original code was poorly structured and because I made some questionable decisions. The new code will be described in the next section. I also switched to PlatformIO.
+
+## Project structure
+This project follows the standard PlatformIO project structure. The libraries are described below.
+
+| Library | Description |
+| ------- | ----------- |
+| `AstroCalculator` | A singleton class for coordinates conversion and earth magnetic field calculation. |
+| `Datatypes` | `struct` types for coordinate systems. |
+| `DeviceCoordinates` | A class that represents motor positions and supports conversions to and from the real horizontal coordinates. |
+| `Matrices` | A 3x3 matrix class |
+| `MovementController` | A singleton class for motor control |
+| `Sensors` | A singleton class for sensor access. Includes accelerometer, magnetometer, and GPS. |
+| `TempDebug` | A header file to quickly toggle print statements. |
+| `Vectors` | A 3D vector class. |
