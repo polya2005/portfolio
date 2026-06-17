@@ -4,6 +4,7 @@ import "../index.css";
 import { Link, useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
 import ReactMarkdown from "react-markdown";
+import remarkGfm from "remark-gfm";
 import MarkdownComponents from "../components/MarkdownComponents";
 
 function ProjectPage() {
@@ -40,7 +41,7 @@ function ProjectPage() {
           &larr; Back to Projects
         </Link>
       </div>
-      <ReactMarkdown components={MarkdownComponents}>
+      <ReactMarkdown components={MarkdownComponents} remarkPlugins={[remarkGfm]}>
         {noteContent}
       </ReactMarkdown>
     </div>

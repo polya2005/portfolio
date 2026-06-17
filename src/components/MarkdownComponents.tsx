@@ -47,10 +47,7 @@ function P(props: object) {
 
 function A(props: object) {
   return (
-    <a
-      className="text-accent hover:underline text-2xl text-sans"
-      {...props}
-    />
+    <a className="text-accent hover:underline text-2xl text-sans" {...props} />
   );
 }
 
@@ -72,6 +69,50 @@ function UL(props: object) {
   );
 }
 
+function Blockquote(props: object) {
+  return (
+    <blockquote
+      className="border-l-4 border-text-primary bg-white/5 pl-4 py-2 italic text-gray-600 my-4"
+      {...props}
+    />
+  );
+}
+
+function Table(props: object) {
+  return (
+    <table
+      className="my-4 border-collapse border border-text-primary w-full text-text-secondary text-2xl text-sans"
+      {...props}
+    />
+  );
+}
+
+function TR(props: object) {
+  return <tr className="border border-text-primary" {...props} />;
+}
+
+function TH(props: object) {
+  return (
+    <th
+      className="border border-text-primary px-4 py-3 bg-accent-soft text-center"
+      {...props}
+    />
+  );
+}
+
+function TD(props: object) {
+  return <td className="border border-text-primary px-4 py-2" {...props} />;
+}
+
+function Code(props: object) {
+  return (
+    <code
+      className="bg-bg-elevated text-text-secondary font-mono p-1 rounded"
+      {...props}
+    />
+  );
+}
+
 const MarkdownComponents = {
   h1: H1,
   h2: H2,
@@ -81,6 +122,12 @@ const MarkdownComponents = {
   a: A,
   ul: UL,
   ol: OL,
+  blockquote: Blockquote,
+  table: Table,
+  tr: TR,
+  td: TD,
+  th: TH,
+  code: Code,
 };
 
 export default MarkdownComponents;
