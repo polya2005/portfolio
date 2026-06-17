@@ -22,7 +22,9 @@ function getSkillColor(skill: ProjectSkill): string {
     case ProjectSkill.Cpp:
       return "bg-blue-200 text-blue-800";
     case ProjectSkill.Python:
-      return "bg-gray-200 text-gray-800";
+      return "bg-yellow-200 text-blue-600";
+    case ProjectSkill.PcbDesign:
+      return "bg-green-200 text-green-800";
     default:
       return "bg-gray-200 text-gray-800";
   }
