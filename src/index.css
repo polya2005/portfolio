@@ -36,3 +36,10 @@
   --font-mono: "IBM Plex Mono", monospace;
   --font-sans: "IBM Plex Sans", Geist, Manrope, Inter, sans-serif;
 }
+
+/* KaTeX display mode */
+span.katex-html {
+  color: var(--color-text-secondary);
+  font-size: var(--text-2xl);
+  line-height: var(--text-2xl--line-height);
+}
