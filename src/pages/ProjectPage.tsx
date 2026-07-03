@@ -5,8 +5,9 @@ import { Link, useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
-import rehypeKatex from "rehype-katex";
 import remarkMath from "remark-math";
+import rehypeKatex from "rehype-katex";
+import rehypeRaw from "rehype-raw";
 import "katex/dist/katex.min.css";
 import MarkdownComponents from "../components/MarkdownComponents";
 
@@ -44,7 +45,7 @@ function ProjectPage() {
           &larr; Back to Projects
         </Link>
       </div>
-      <ReactMarkdown components={MarkdownComponents} remarkPlugins={[remarkGfm, remarkMath]} rehypePlugins={[rehypeKatex]}>
+      <ReactMarkdown components={MarkdownComponents} remarkPlugins={[remarkGfm, remarkMath]} rehypePlugins={[rehypeKatex, rehypeRaw]}>
         {noteContent}
       </ReactMarkdown>
     </div>
