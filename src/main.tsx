@@ -11,6 +11,8 @@ import About from "./pages/About.tsx";
 import ErrorPage from "./Error.tsx";
 import Notes from "./pages/Notes.tsx";
 import NotePage from "./pages/NotePage.tsx";
+import Projects from "./pages/Projects.tsx";
+import ProjectPage from "./pages/ProjectPage.tsx";
 
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
@@ -18,6 +20,8 @@ createRoot(document.getElementById("root")!).render(
       <Routes>
         <Route element={<App />}>
           <Route path="/" index element={<Home />} />
+          <Route path="/projects" element={<Projects />} />
+          <Route path="/project/:projectId" element={<ProjectPage />} />
           <Route path="/resume" element={<Resume />} />
           <Route path="/about" element={<About />} />
           <Route path="/notes" element={<Notes />} />
