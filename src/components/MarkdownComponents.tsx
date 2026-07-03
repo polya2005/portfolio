@@ -113,6 +113,17 @@ function Code(props: object) {
   );
 }
 
+function Image(props: object) {
+  return (
+    <div className="flex justify-center items-center w-full h-auto">
+      <img
+        className="max-w-full h-auto max-h-[60vh] rounded-lg my-4"
+        {...props}
+      />
+    </div>
+  );
+}
+
 const MarkdownComponents = {
   h1: H1,
   h2: H2,
@@ -128,6 +139,7 @@ const MarkdownComponents = {
   td: TD,
   th: TH,
   code: Code,
+  img: Image,
 };
 
 export default MarkdownComponents;
