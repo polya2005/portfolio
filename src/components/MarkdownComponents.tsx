@@ -1,4 +1,6 @@
 import "../index.css";
+import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
+import { dracula } from "react-syntax-highlighter/dist/esm/styles/prism";
 
 function H1(props: object) {
   return (
@@ -104,12 +106,21 @@ function TD(props: object) {
   return <td className="border border-text-primary px-4 py-2" {...props} />;
 }
 
-function Code(props: object) {
-  return (
-    <code
-      className="bg-bg-elevated text-text-secondary font-mono p-1 rounded"
-      {...props}
+function Code(props: {children: React.ReactNode; className?: string, node?: any}) {
+  const { children, className, node, ...rest } = props;
+  const match = /language-(\w+)/.exec(className || "");
+  return match ? (
+    <SyntaxHighlighter
+      {...rest}
+      PreTag="div"
+      children={String(children).replace(/\n$/, "")}
+      language={match[1]}
+      style={dracula}
     />
+  ) : (
+    <code {...rest} className={`bg-bg-elevated text-text-secondary font-mono p-1 rounded ${className}`}>
+      {children}
+    </code>
   );
 }
 
