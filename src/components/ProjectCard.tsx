@@ -25,7 +25,7 @@ function ProjectCard({ projectId }: { projectId: string }) {
           <div className="flex items-center space-x-1">
             {projectItem.skills.length > 0 &&
               projectItem.skills.map((skill) => (
-                <ProjectSkillLabel key={skill} skill={skill} />
+                <ProjectSkillLabel key={skill.name} skill={skill} />
               ))}
           </div>
         </div>
