@@ -22,6 +22,8 @@ export const NoteTag = {
   Personal: { name: "personal", color: "bg-green-200 text-green-800" },
   Coursework: { name: "coursework", color: "bg-blue-200 text-blue-800" },
   Project: { name: "project", color: "bg-yellow-200 text-yellow-800" },
+  Math: { name: "math", color: "bg-purple-200 text-purple-800" },
+  Embedded: { name: "embedded", color: "bg-red-200 text-red-800" },
 } as const;
 
 export type NoteTag = (typeof NoteTag)[keyof typeof NoteTag];
