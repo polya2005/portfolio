@@ -3,14 +3,15 @@ import { NoteTag } from "./types";
 
 const notes: Map<string, NoteItem> = new Map([
   [
-    "test",
+    "bit-set-unset",
     {
-      fileName: "test.md",
-      title: "Test Note",
+      fileName: "bit-set-unset.md",
+      title: "A Nice Branchless Bit Set/Unset Trick",
       datePosted: new Date("2026-06-08"),
       dateEdited: new Date("2026-06-08"),
-      preview: "This is a preview of the test note.",
-      tags: [NoteTag.Personal],
+      preview:
+        "Setting and unsetting a single bit is a common operation in low-level programming, especially in embedded systems. For example, you might want to set a specific bit in a GPIO register to turn on an LED, or unset a bit to turn it off...",
+      tags: [NoteTag.Embedded, NoteTag.Math],
     },
   ],
 ]);
