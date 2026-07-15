@@ -106,7 +106,7 @@ function TD(props: object) {
   return <td className="border border-text-primary px-4 py-2" {...props} />;
 }
 
-function Code(props: {children: React.ReactNode; className?: string, node?: any}) {
+function Code(props: {children?: React.ReactNode; className?: string, node?: any}) {
   const { children, className, node, ...rest } = props;
   const match = /language-(\w+)/.exec(className || "");
   return match ? (
