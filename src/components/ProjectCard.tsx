@@ -36,7 +36,7 @@ function ProjectCard({ projectId }: { projectId: string }) {
       </div>
       {projectItem.imagePath && (
         <img
-          src={projectItem.imagePath}
+          src={`${import.meta.env.BASE_URL}${projectItem.imagePath}`}
           alt={`${projectItem.title} image`}
           className="ml-6 w-48 h-48 object-cover rounded bg-white"
         />

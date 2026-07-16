@@ -124,12 +124,14 @@ function Code(props: {children?: React.ReactNode; className?: string, node?: any
   );
 }
 
-function Image(props: object) {
+function Image(props: {src?: string;}) {
+  const { src, ...rest } = props;
   return (
     <div className="flex justify-center items-center w-full h-auto">
       <img
         className="max-w-full h-auto max-h-[60vh] rounded-lg my-4"
-        {...props}
+        src={`${import.meta.env.BASE_URL}${src}`}
+        {...rest}
       />
     </div>
   );

@@ -19,7 +19,7 @@ function NotePage() {
   useEffect(() => {
     async function loadText() {
       try {
-        const response = await fetch(`/notes/${noteItem!.fileName}`);
+        const response = await fetch(`${import.meta.env.BASE_URL}notes/${noteItem!.fileName}`);
         const text = await response.text();
         setNoteContent(text);
       } catch (err) {

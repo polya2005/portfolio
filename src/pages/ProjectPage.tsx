@@ -24,7 +24,7 @@ function ProjectPage() {
   useEffect(() => {
     async function loadText() {
       try {
-        const response = await fetch(`/projects/${projectItem!.fileName}`);
+        const response = await fetch(`${import.meta.env.BASE_URL}projects/${projectItem!.fileName}`);
         const text = await response.text();
         setNoteContent(text);
       } catch (err) {

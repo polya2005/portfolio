@@ -19,7 +19,7 @@ function Resume() {
       </a>
       <iframe
         className="grow shrink w-full h-[80vh] rounded-lg border-2 border-accent mt-12"
-        src="/resume.pdf"
+        src={`${import.meta.env.BASE_URL}resume.pdf`}
         title="Resume"
       />
     </div>
