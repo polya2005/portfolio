@@ -9,7 +9,7 @@ I started this project in my sophomore year of high school as a part of my scien
 As the name suggests, the device requires these core functionalities:
 
 - Given a choice of star, point the (physical) pointer toward the position of the star in the sky
-- Given the pointer's direction, identify the star it is poining toward
+- Given the pointer's direction, identify the star it is pointing toward
 
 For the device to be useful, it also needs the way to
 
