@@ -8,7 +8,7 @@ function Resume() {
         Resume
       </h1>
       <a
-        href="/resume.pdf"
+        href={`${import.meta.env.BASE_URL}resume.pdf`}
         download
         className="flex items-center bg-bg-elevated border-border-primary border-2 text-text-primary text-4xl font-mono w-full h-20 px-6 rounded-2xl  hover:bg-accent hover:text-bg-primary hover:cursor-pointer transition-colors"
       >
