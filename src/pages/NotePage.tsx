@@ -1,7 +1,7 @@
 import { getNoteById } from "../notes";
 import ErrorPage from "../Error";
 import "../index.css";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
 import ReactMarkdown from "react-markdown";
 import MarkdownComponents from "../components/MarkdownComponents";
@@ -19,7 +19,9 @@ function NotePage() {
   useEffect(() => {
     async function loadText() {
       try {
-        const response = await fetch(`${import.meta.env.BASE_URL}notes/${noteItem!.fileName}`);
+        const response = await fetch(
+          `${import.meta.env.BASE_URL}notes/${noteItem!.fileName}`,
+        );
         const text = await response.text();
         setNoteContent(text);
       } catch (err) {
@@ -32,6 +34,14 @@ function NotePage() {
 
   return (
     <div className="flex flex-col grow shrink w-full bg-bg-primary/50 rounded-xl p-6 space-y-2.5">
+      <div>
+        <Link
+          to="/notes"
+          className="text-sm text-text-muted font-mono mb-2 hover:underline"
+        >
+          &larr; Back to Notes
+        </Link>
+      </div>
       <ReactMarkdown components={MarkdownComponents}>
         {noteContent}
       </ReactMarkdown>
