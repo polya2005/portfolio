@@ -14,7 +14,7 @@ function H1(props: object) {
 function H2(props: object) {
   return (
     <h2
-      className="grow-0 shrink text-accent text-3xl font-mono font-semibold mt-8 mb-6"
+      className="grow-0 shrink text-accent text-4xl font-mono font-semibold mt-8 mb-6"
       {...props}
     />
   );

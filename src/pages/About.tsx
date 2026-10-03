@@ -459,20 +459,20 @@ function About() {
         <Intro />
         <HorizontalLine />
 
-        <h2 className="grow-0 shrink text-accent text-3xl font-mono font-semibold mt-12 mb-6">
+        <h2 className="grow-0 shrink text-accent text-4xl font-mono font-semibold mt-12 mb-6">
           Interests
         </h2>
         <Interests />
         <HorizontalLine />
 
-        <h2 className="grow-0 shrink text-accent text-3xl font-mono font-semibold mt-12 mb-6">
+        <h2 className="grow-0 shrink text-accent text-4xl font-mono font-semibold mt-12 mb-6">
           Teaching and Research
         </h2>
         <TeachingAndResearch />
         <HorizontalLine />
 
         <h2
-          className="grow-0 shrink text-accent text-3xl font-mono font-semibold mt-12 mb-6"
+          className="grow-0 shrink text-accent text-4xl font-mono font-semibold mt-12 mb-6"
           id="coursework"
         >
           Coursework
@@ -480,7 +480,7 @@ function About() {
         <Coursework />
         <HorizontalLine />
 
-        <h2 className="grow-0 shrink text-accent text-3xl font-mono font-semibold mt-12 mb-6">
+        <h2 className="grow-0 shrink text-accent text-4xl font-mono font-semibold mt-12 mb-6">
           Miscellaneous Information
         </h2>
         <MiscInfo />
